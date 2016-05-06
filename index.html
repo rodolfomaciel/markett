@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Standard Model</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<style>
+
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header,
+hgroup, main, menu, nav, section, summary {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html {
+  font-size: 10px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 1.428571429;
+  color: #424242;
+  background-color: #fff;
+}
+/* fim reset meyerwebcss */
+
+/* grid  */
+
+.box, .line, .col {background-color: transparent;}
+
+.box{padding-top: 5px;}
+/* .box:last-child{padding-bottom: 5px;} */
+
+.line{width: 100%; padding-top: 15px; display: flex; justify-content: center;}
+.line:last-child{ padding-bottom: 15px;}
+
+.col{padding-left: 15px; padding-right: 15px;}
+.col:last-child{}
+
+.um {width:calc(8.33333333% - 15px)}
+.dois {width:calc(16.66666667% - 15px)}
+.tres {width: calc(25% - 15px)}
+.quatro {width:calc(33.33333333% - 15px)}
+.cinco {width:calc(41.66666667% - 15px)}
+.seis {width:calc(50% - 15px)}
+.sete {width:calc(58.33333333% - 15px)}
+.oito {width:calc(66.66666667% - 15px)}
+.nove {width:calc(75% - 15px)}
+.dez {width:calc(83.33333333% - 15px)}
+.onze {width:calc(91.66666667% - 15px)}
+.doze {width:calc(100% - 15px)}
+/* fim grid */
+
+/* tipografia */
+h1, h2, h3, h4, h5, h6, ul, ol, p, input, button, label {font-family: sans-serif; line-height: 1.428571429; margin-bottom: 15px;}
+h1 {font-size: 44px;}
+h2 {font-size: 36px;}
+h3 {font-size: 28px;}
+h4 {font-size: 26px}
+h5 {font-size: 22px;}
+h6 {font-size: 18px;}
+p, ul, ol {font-size: 16px;}
+small {font-size: 65%;}
+mark {background-color: #FFF59D;}
+del, s {text-decoration: line-through;}
+ins, u {text-decoration: underline;}
+strong {font-weight:700;}
+em {font-style: italic;}
+blockquote {margin: 15px 0; padding-left: 20px; color: #64B5F6; font-size: 22px; border-left: 2px solid #64B5F6;}
+ul, ol {list-style: square; padding-left: 25px;}
+ol {list-style-type: decimal;}
+/* fim tipografia */
+
+/* media */
+.video,
+.audio {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    margin: 15px 0;
+}
+
+video {
+    width: 100% !important;
+    height: auto !important
+}
+
+iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%
+}
+
+.video object,
+.video embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%
+}
+
+img {
+  vertical-align: middle;
+  display: block;
+  max-width: 100%;
+  width: 100vw;
+  height: auto;
+  margin: 15px 0;
+  padding: 0;
+  page-break-inside: avoid;
+  border: 0;
+}
+/* fim media*/
+
+/* forms */
+button {
+	width: 100%;
+    background-color: #2196F3;
+    border: none;
+    color: #FFF;
+    padding: 22px;
+    text-align: center;
+    text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	cursor: pointer;
+	transition: box-shadow 0.3s;
+
+	}
+button:hover {box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 6px 20px 0 rgba(0,0,0,0.19);}
+
+input[type="text"] {
+	display: block;
+	margin-bottom: 15px;
+	width:calc(99.1% - 15px);
+	font-family: sans-serif;
+	font-size: 16px;
+	text-align: center;
+	appearance: none;
+	box-shadow: none;
+	border-radius: none;
+	padding: 22px 0 22px 10px;
+	border: solid 3px #BBDEFB;
+	transition: border 0.3s;
+}
+
+input[type="text"]:focus {
+outline: none;
+	border: solid 3px #2196F3;
+}
+
+@media only screen and (min-width: 1px) {
+	.ww {width: calc(100% - 15px);}
+}
+
+@media only screen and (min-width: 320px) {
+	.ww {width:calc(91.66666667% - 15px)}
+}
+
+@media only screen and (min-width: 544px) {
+	.ww {width:calc(83.33333333% - 15px)}
+}
+
+@media only screen and (min-width: 768px) {
+	.ww {width:calc(75% - 15px)}
+}
+
+@media only screen and (min-width: 1080px) {
+	.ww {width:calc(58.33333333% - 15px)}
+}
+
+/*
+.um {width:calc(8.33333333% - 15px)}
+.dois {width:calc(16.66666667% - 15px)}
+.tres {width: calc(25% - 15px)}
+.quatro {width:calc(33.33333333% - 15px)}
+.cinco {width:calc(41.66666667% - 15px)}
+.seis {width:calc(50% - 15px)}
+.sete {width:calc(58.33333333% - 15px)}
+.oito {width:calc(66.66666667% - 15px)}
+.nove {width:calc(75% - 15px)}
+.dez {width:calc(83.33333333% - 15px)}
+.onze {width:calc(91.66666667% - 15px)}
+.doze {width:calc(100% - 15px)}
+ fim grid */
+.a {background-color: #2196F3; color: #fff;}
+
+
+</style>
+
+<body>
+	<header class="box a">
+		<div class="line a">
+			<div class="col doze a">
+				RODOLFOMACIEL
+			</div>
+		</div>
+	</header>
+	<main class="box">
+		<div class="line ">
+			<div class="col ww"> 
+				<h1>h1. Bootstrap heading mauris Proin Faubicus arc quieu anter <small>Secondary text</small></h1>
+
+					  	<p>Vivamus euismod mauris. Proin faucibus arcu quis ante.
+
+					  	<img src="https://farm8.staticflickr.com/7380/10007523486_abda3d86d7_z.jpg"/>
+
+						<p>Nullam dictum felis eu pede mollis pretium. Vestibulum rutrum, mi nec elementum vehicula, eros quam gravida nisl, id fringilla neque ante vel mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis feugiat diam, a ultricies metus. Suspendisse vitae ullamcorper purus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque a neque rutrum justo aliquet maximus ut aliquet nisi. Duis nec urna tempor nibh scelerisque euismod. Nulla ultrices euismod magna, eget malesuada tellus interdum in. Curabitur convallis gravida dui et finibus. Integer interdum urna nec turpis efficitur vehicula. Praesent ullamcorper eu tellus non bibendum. In eget suscipit urna. Vestibulum ut nulla faucibus, dictum libero sed, bibendum odio. Nulla turpis eros, convallis quis porta consequat, finibus eget orci. Donec quis justo aliquet, maximus lorem id, pulvinar diam. Nullam blandit sagittis nisi, at sagittis felis eleifend eu.
+
+
+
+
+
+
+
+
+				  	<h2>h2. Bootstrap heading <small>Secondary text</small></h2>
+				  		<p>Vivamus euismod mauris. Proin faucibus arcu quis ante. Duis eu iaculis neque, id tempus magna. Nunc at posuere est. Nunc feugiat ullamcorper mi nec cursus. Suspendisse vel ex sapien. Nunc ultrices mollis neque, eu cursus leo eleifend ac. Quisque aliquet erat leo, eget pretium mi accumsan vel. Mauris ullamcorper, quam at tempus sollicitudin, diam sem tempor mauris, vitae laoreet mi felis id nisl. Ut a vehicula diam. Ut eu consectetur dui. Fusce eget leo ut odio varius aliquet. Nam auctor quam lectus, sit amet auctor nisl interdum eu. Cras sit amet consequat purus.
+
+						<p>Nullam dictum felis eu pede mollis pretium. Vestibulum rutrum, mi nec elementum vehicula, eros 	quam gravida nisl, id fringilla neque ante vel mi.
+
+				  	<h3>h3. Bootstrap heading <small>Secondary text</small></h3>
+				  	  	<p>Vivamus euismod mauris. <mark>Proin faucibus arcu quis ante.</mark></p>
+
+						<p>Nullam dictum felis eu pede mollis pretium. Vestibulum rutrum, mi nec elementum vehicula, eros quam gravida nisl, id fringilla neque ante vel mi. Sed vel leo velit. Pellentesque tellus lacus, facilisis ut ex et, posuere lacinia sem. Phasellus nec placerat erat. Mauris eleifend dolor quis ultrices viverra. Vivamus dolor ante, venenatis vitae nisi sit amet, dapibus accumsan ante. Aliquam lobortis eros nec ipsum iaculis, et ultrices nibh dictum. Mauris semper, nisl eget rhoncus eleifend, urna diam faucibus justo, at maximus lacus tortor vulputate ipsum. Nullam sit amet malesuada lectus. Mauris nec aliquet ex. Sed quis massa est. Vestibulum eget venenatis elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam consectetur imperdiet ex sed hendrerit. Nulla finibus vehicula nisi, suscipit egestas magna finibus at. Aliquam erat volutpat.</p>
+
+						<div class="video">
+						<iframe width="420" height="315" src="https://www.youtube.com/embed/KJn_41ZpWh8" frameborder="0" allowfullscreen></iframe>
+						</div>
+
+						<blockquote>We use those variables and some simple math to create the margins, paddings, and line-heights of all our type and more. Customize them and Bootstrap adapts.</blockquote>
+
+						<p>Nullam dictum felis eu pede mollis pretium. Vestibulum rutrum, mi nec elementum vehicula, eros quam gravida nisl, id fringilla neque ante vel mi. Duis in dui vel dolor dignissim consectetur. Nunc ut sagittis diam. Mauris non nulla dictum, facilisis sapien in, faucibus metus. Nunc scelerisque velit magna, dignissim molestie nunc luctus in. Fusce elit turpis, porta vitae erat vel, accumsan cursus orci. Curabitur lacinia ex vitae euismod pretium. Aliquam sollicitudin, diam id tincidunt faucibus, mauris massa tempor ipsum, a cursus nulla sapien a elit. Mauris imperdiet sodales nisi, in volutpat odio. Aenean rhoncus, magna et suscipit vulputate, magna velit maximus eros, id elementum urna odio et magna. Fusce porttitor elit erat, id gravida purus blandit sed. Integer vitae cursus sem, vel sodales dui. Sed lacinia non orci ut hendrerit. Curabitur quis libero tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+					  	<ol>
+					  		<li>Primeiro</li>
+					  		<li>Segundo</li>
+					  		<li>Terceiro</li>
+					  		<li>Quarto</li>
+					  		<li>Quinto</li>
+					  	</ol>
+
+				  	<h4>h4. Bootstrap heading <small>Secondary text</small></h4>
+				  	  	<p><u>Vivamus euismod mauris. Proin faucibus arcu quis ante. 
+Quisque elementum id felis non vulputate. Quisque aliquet auctor ipsum, eu lacinia purus. Integer fringilla at purus at vehicula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed congue tellus id placerat suscipit. Aenean vitae libero non arcu lacinia porttitor vel ut urna. Proin cursus leo nibh, ac facilisis tellus ullamcorper et. Curabitur eros dui, ornare at laoreet at, fringilla non purus. Nunc quis neque enim. Phasellus eleifend nec ligula eget mollis. Donec vulputate id velit vitae accumsan. Maecenas ex erat, tempor efficitur arcu vitae, elementum ornare enim. Aenean vitae facilisis tortor, quis eleifend urna.</u></p>
+
+						<p><del>Nullam dictum felis eu pede mollis pretium. Vestibulum rutrum, mi nec elementum vehicula,</del> eros quam gravida nisl, id fringilla neque ante vel mi.</p>
+
+						<input type="text" placeholder="Digite seu email favorito">
+						<button>CLIQUE NESTE BOTÃO PARA ENTRAR</button>
+
+			</div>
+		</div>
+		<div class="line">
+			<div class="h"></div>
+			<style type="text/css">.h{height: 100px}</style>
+		</div>	
+	</main>
+	
+	<footer class="box a">
+		<div class="line">
+			<div class="col doze a">
+				TODOS OS DIREITOS RESERVADOS
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
