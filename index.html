@@ -90,6 +90,7 @@ body {
 .col{padding-left: 15px; padding-right: 15px;}
 .col:last-child{}
 
+/*
 .um {width:calc(8.33333333% - 15px)}
 .dois {width:calc(16.66666667% - 15px)}
 .tres {width: calc(25% - 15px)}
@@ -107,7 +108,6 @@ body {
 /* tipografia */
 h1, h2, h3, h4, h5, h6, ul, ol, p, input, button, label {font-family: 'Roboto', sans-serif; margin-bottom: 15px;}
 h1, h2, h3, h4, h5, h6 {line-height: 1.428571429;}
-
 small {font-size: 65%;}
 mark {background-color: #FFF59D;}
 del, s {text-decoration: line-through;}
@@ -184,7 +184,6 @@ input[type="text"] {
 	display: block;
 	margin-bottom: 15px;
 	width:calc(99.1% - 15px);
-	font-family: sans-serif;
 	font-size: 16px;
 	text-align: center;
 	appearance: none;
@@ -196,12 +195,26 @@ input[type="text"] {
 }
 
 input[type="text"]:focus {
-outline: none;
+	outline: none;
 	border: solid 3px #2196F3;
 }
-
+/*
+.um {width:calc(8.33333333% - 15px)}
+.dois {width:calc(16.66666667% - 15px)}
+.tres {width: calc(25% - 15px)}
+.quatro {width:calc(33.33333333% - 15px)}
+.cinco {width:calc(41.66666667% - 15px)}
+.seis {width:calc(50% - 15px)}
+.sete {width:calc(58.33333333% - 15px)}
+.oito {width:calc(66.66666667% - 15px)}
+.nove {width:calc(75% - 15px)}
+.dez {width:calc(83.33333333% - 15px)}
+.onze {width:calc(91.66666667% - 15px)}
+.doze {width:calc(100% - 15px)}
+*/
 @media only screen and (min-width: 1px) {
-	.ww {width: calc(100% - 15px);}
+	.doze {width:calc(100% - 15px)}
+	.pr {width: calc(100% - 15px);}
 	
 h1 {font-size: 36px;}
 h2 {font-size: 30px;}
@@ -214,7 +227,7 @@ p, ul, ol {font-size: 17px;}
 }
 
 @media only screen and (min-width: 544px) {
-	.ww {width:calc(91.66666667% - 15px)}
+	.pr {width:calc(91.66666667% - 15px)}
 	
 h1 {font-size: 44px;}
 h2 {font-size: 36px;}
@@ -226,17 +239,17 @@ p, ul, ol {font-size: 18px;}
 }
 
 @media only screen and (min-width: 768px) {
-	.ww {width:calc(83.33333333% - 15px)}
+	.pr {width:calc(83.33333333% - 15px)}
 	h1 {font-size: 44px;}
 }
 
 
 @media only screen and (min-width: 924px) {
-	.ww {width:calc(66.66666667% - 15px)}
+	.pr {width:calc(66.66666667% - 15px)}
 }
 
 @media only screen and (min-width: 1080px) {
-	.ww {width:calc(50% - 15px)}
+	.pr {width:calc(50% - 15px)}
 }
 
 .a {background-color: #2196F3; color: #fff;}
@@ -254,7 +267,7 @@ p, ul, ol {font-size: 18px;}
 	</header>
 	<main class="box">
 		<div class="line ">
-			<div class="col ww"> 
+			<div class="col pr"> 
 				<h1>h1. Bootstrap heading mauris Proin Faubicus arc quieu anter <small>Secondary text</small></h1>
 
 					  	<p>Vivamus euismod mauris. Proin faucibus arcu quis ante.
